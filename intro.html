@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script>
+      function myFunc(){
+        document.getElementById('test1').innerHTML = "paragraph1";
+      }
+    </script>
+  </head>
+
+  <body>
+  JavaScript Can Change HTML Content
+  <div id = "demo">world</div>
+  <button onclick="document.getElementById('demo').innerHTML= 'hello'">try it</button>
+  <br><br>
+
+
+  JavaScript Can Change HTML Attributes
+  <br>
+  <img id = "img" src="a">
+  <br>
+  <button onclick="document.getElementById('img').src = 'pic_bulbon.gif'">img change</button>
+  <br><br>   
+
+
+  JavaScript Can Change HTML Styles (CSS)
+  <div id = "text">coupang</div>
+  <button onclick="document.getElementById('text').style.fontSize='25px'">css change</button>
+  <br><br>
+
+
+
+  JavaScript Can Hide HTML Elements
+  <div id = "hide">hide this</div>
+  <button onclick = "document.getElementById('hide').style.display='none'">hide</button>
+  <br><br>
+
+
+
+  JavaScript Can Show HTML Elements
+  <br>
+  <div id = "nohide" style="display:none">show this</div>
+  <button onclick = "document.getElementById('nohide').style.display='block'">show</button>
+  <br><br>
+  
+  
+  
+  <div style="color:red">JavaScript in head</div>
+  <div id = "test1"></div>
+  <button onclick = "myFunc()">try it</button>
+  <br><br>
+  
+  
+  <div style="color:red">JavaScript in body</div>
+  <div style="color:gray">It is a good idea to place scripts at the bottom of the body element.
+  This can improve page load, because script compilation can slow down the display.
+  </div>
+  <div id = "test2"></div>
+  <button onclick = "myFunc2()">try it</button>
+  <script>
+  function myFunc2(){
+    document.getElementById("test2").innerHTML = "paragraph2";
+  }
+  </script>
+  <br><br>
+  
+  
+  
+  <div style = "color:red">External JavaScript</div>
+  <div style = "color:gray">You can place an external script reference in head or body as you like.</div>
+  <ul style = "color:gray">External JavaScript Advantages
+    <li>It separates HTML and code</li>
+    <li>It makes HTML and JavaScript easier to read and maintain</li>
+    <li>Cached JavaScript files can speed up page loads</li>
+  </ul>
+  <div id = "test3"></div>
+  <button onclick = "myFunc3()">try it</button>
+  <script src="script.js"></script>
+  
+  </body>
+</html>
