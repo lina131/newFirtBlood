@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  
+<head></head>
+
+<body>
+  
+<br><br>
+<div style = "color:red">JavaScript Programs</div>
+<div style = "color:gray">In HTML, JavaScript programs can be executed by the web browser.</div>
+<div id = "test1"></div>
+<script>
+  var x = 5;
+  var y = 6;
+  var z = 5 + 6;
+  document.getElementById("test1").innerHTML = z;
+</script>
+<br><br><br>
+
+
+<div style = "color:red">JavaScript Literals</div>
+<div style = "color:gray">Numbers are written with or without decimals:</div>
+<div id = "test2"></div>
+<script>
+  document.getElementById("test2").innerHTML = 10.50;
+</script>
+<br>
+<div style = "color:gray">Strings are text, written within double or single quotes:</div>
+<div id = "test3"></div>
+<div id = "test4"></div>
+<script>
+  document.getElementById("test3").innerHTML = "Jone Doe";
+  document.getElementById("test4").innerHTML = 'Jone Doe'
+</script>
+<br><br><br>
+
+
+
+<div style = "color:red">JavaScript Variables</div>
+<ul style = "color:gray">
+  <li>JavaScript uses the var keyword to declare variables</li>
+  <li>In a programming language, variables are used to store data values.</li>
+</ul>
+<div id = "test5"></div>
+<script>
+  var a;
+  a = 6;
+  document.getElementById("test5").innerHTML = a;
+</script>
+<br><br><br>
+
+
+
+
+<div style = "color:red">JavaScript Operators</div>
+<div style = "color:gray">JavaScript uses an assignment operator ( = ) to assign values to variables:</div>
+<div id = "test6"></div>
+<script>
+  var x6 = 5;
+  var y6 = 6;
+  var z6 = x6 + y6;
+  document.getElementById("test6").innerHTML = z6;
+</script>
+<div style = "color:gray">JavaScript uses arithmetic operators ( + - *  / ) to compute values:</div>
+<div id = "test7"></div>
+<script>
+  document.getElementById("test7").innerHTML = ( 5 + 6 ) * 10;
+</script>
+<br><br><br>
+
+
+
+<div style = "color:red">JavaScript Expressions</div>
+<div id = "test8"></div>
+<div id = "test9"></div>
+<div id = "test10"></div>
+<script>
+  var x9 = 5;
+  document.getElementById("test8").innerHTML = 5 * 6;
+  document.getElementById("test9").innerHTML = x9 * 6;
+  document.getElementById("test10").innerHTML = "Jone" + " " + "Doe";
+</script>
+<br><br><br>
+
+
+
+
+<div style = "color:red">JavaScript Keywords</div>
+<div style = "color:gray">JavaScript keywords are used to identify actions to be performed.
+
+The var keyword tells the browser to create a new variable:</div>
+<div id = "test11"></div>
+<script>
+  var x = 5 + 6;
+  var y = x * 10;
+  document.getElementById("test11").innerHTML = y;
+</script>
+<br><br><br>
+
+
+
+<div style = "color:red">JavaScript is Case Sensitive</div>
+<div style = "color:gray">The variables lastName and lastname, are two different variables.</div>
+<div id = "test12"></div>
+<script>
+  var lastName = "John";
+  var lastname = "Doe";
+  document.getElementById("test12").innerHTML = lastName;
+</script>
+<br><br><br>
+
+
+
+
+
+<!-- JavaScript Statements -->
+<div style = "color:blue">JavaScript Statements</div>
+<div style = "color:red">JavaScript Line Length and Line Breaks</div>
+<div style = "color:gray">For best readability, programmers often 
+like to avoid code lines longer than 80 characters.
+If a JavaScript statement does not fit on one line,
+the best place to break it, is after an operator:</div>
+<div id = "test14"></div>
+<script>
+  document.getElementById("test14").innerHTML = 
+  "Hello Dolly";
+</script>
+<br><br><br>
+
+
+
+<div style = "color:red">JavaScript Code Blocks</div>
+<div style = "color:gray">The purpose of code blocks is to define statements 
+to be executed together.</div>
+<div id = "test15"></div>
+<div id = "test16"></div>
+<button onclick = "myFunction()">try it</button>
+<script>
+  function myFunction(){ 
+    document.getElementById("test15").innerHTML = "Hello Dolly";
+    document.getElementById("test16").innerHTML = "How are you?";
+  }
+</script>
+<br><br><br>
+
+</body>
+
+</html>
