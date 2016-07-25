@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  
+<head></head>
+
+<body>
+  
+  <!-- JavaScript Functions -->
+  <div style = "color:blue">JavaScript Functions</div>
+  <ul style = "color:gray"><li>Function <strong>parameters</strong> 
+  are the <strong>names</strong> listed in the function definition.</li>
+  <li>Function <strong>arguments</strong> are the real 
+  <strong>values</strong> received by the function when it is invoked.</li>
+  </ul>
+  <div id = "test1"></div>
+  <script>
+    function myFunction(p1, p2) {
+      return p1 * p2;
+    }
+    document.getElementById("test1").innerHTML = myFunction(4, 3);
+  </script>
+  <br><br><br>
+
+
+
+
+  <div style = "color:red">The () Operator Invokes the Function</div>
+  <div style = "color:gray">toCelsius refers to the function object, 
+  and toCelsius() refers to the function result.
+  </div>
+  <div id = "test2"></div>
+  <script>
+    function toCelsius(fahrenheit) {
+      return (5/9) * (fahrenheit-32);
+    }
+    document.getElementById("test2").innerHTML = toCelsius;
+  </script>
+  <br><br><br>
+  
+  
+  
+  <div style = "color:red">Functions Used as Variables</div>
+  <div id = "test3"></div>
+  <script>
+    var x = toCelsius(32);
+    document.getElementById("test3").innerHTML = "The temperature is " + x + " celsisus";
+  </script>
+  <br><br><br>
+
+
+  <!-- JavaScript Objects -->
+  <div style = "color:blue">JavaScript Objects</div>
+  <ul style = "color:gray">
+    <li> 
+      This code assigns <strong>many values</strong> 
+      (Fiat, 500, white) to a <strong>variable</strong> named car:
+    </li>
+    <li>
+      The name:values pairs (in JavaScript objects) are called 
+      <strong>properties</strong>.
+    </li>
+    <li>
+      Methods are <strong>actions</strong> that can be performed on objects.
+      Methods are stored in properties as <strong>function definitions</strong>.
+    </li>
+  </ul>
+  <div id = "test4"></div>
+  <script>
+    var car = {type:"Fiat", model:"500", color:"white"};
+    document.getElementById("test4").innerHTML = car.type;
+  </script>
+  <br><br><br>
+  
+  
+  
+  
+  <div style = "color:red">Accessing Object Properties</div>
+  <div id = "test5"></div>
+  <script>
+    var x5 = {
+      firstName: "John",
+      lastName: "Doe",
+      id: 5566
+    }
+    document.getElementById("test5").innerHTML = x5.firstName + " " + x5["lastName"] 
+    + "'s id " + x5.id;
+  </script>
+  <br><br><br>
+  
+  
+  
+  
+  <div style = "color:red">Accessing Object Methods</div>
+  <div style = "color:gray">A method is a actually a function definition 
+  stored as a property value.</div>
+  <div id = "test6"></div>
+  <script>
+    var x6 = {
+      firstName: "John",
+      lastName: "Doe",
+      id: 5566,
+      fullName: function(){
+        return this.firstName + " " +this.lastName + "'s id " + this.id;
+      }
+    }
+    document.getElementById("test6").innerHTML = x6.fullName();
+  </script>
+  <br><br><br>
+  
+  
+  
+  <!-- JavaScript Scope -->
+  <div style = "color:blue">JavaScript Scope</div>
+  <div style = "color:Red">Local JavaScript Variables</div>
+  <div id = "test7"></div>
+  <script>
+    myFunction();
+    document.getElementById("test7").innerHTML = typeof x7;
+    
+    // code here can not use x7
+    function myFunction7() {
+      var x7 = "Volvo"
+      // code here can use x7
+    }
+  </script>
+  <br><br><br>
+  
+  
+  
+  
+  
+  <div style = "color:red">Global JavaScript Variables</div>
+  <div id = "test8"></div>
+  <script>
+    var x8 = "Volvo"  
+    myFunction8();
+    
+    function myFunction8(){
+      document.getElementById("test8").innerHTML = "I can display " + x8;
+    }
+  </script>
+  <br><br><br>
+  
+  
+  
+  
+  
+  
+  
+  <div style = "color:red">Automatically Global</div>
+  <div id = "test9"></div>
+  <script>
+    myFunction9();
+    document.getElementById("test9").innerHTML = x9;
+    
+    // code here can use x9 as a global variable
+    function myFunction9(){
+      x9 = "Volvo";
+    }
+  </script>
+  <br><br><br>
+  
+  
+  
+  
+  <div style = "color:red">Global Variables in HTML</div>
+  <div id = "test10"></div>
+  <script>
+      x10 = "Volvo";
+      // code here can use window.x10
+      document.getElementById("test10").innerHTML = window.x10;
+  </script>
+  <br><br><br>
+  
+   
+   
+   
+  <!-- JavaScript Events -->
+  <div style = "color:blue">JavaScript Events</div>
+  <div style = "color:red">HTML Events</div>
+  <div style = "color:gray">HTML allows event handler attributes, 
+  <strong>with JavaScript code</strong>, to be added to HTML elements.</div>
+  <div style = "color:gray">
+  the JavaScript code changes the content of the element with id="test11".
+  </div>
+  
+  <button onclick = 'document.getElementById("test11").innerHTML = Date()'>The time is?</button>
+  <div id = "test11"></div>
+ <br><br><br>
+ 
+ 
+ 
+ <div style = "color:gray">the code changes the content 
+ of its own element (using this.innerHTML):</div>
+ <button onclick = "this.innerHTML = Date()">The tin is?</button>
+ <br><br><br>
+ 
+ 
+ 
+ <div style = "color:gray">JavaScript code is often several lines long. 
+ It is more common to see event attributes calling functions:</div>
+ <button onclick = "displayDate();">The time is?</button>
+ <div id = "test12"></div>
+ <script>
+   function displayDate(){
+     document.getElementById("test12").innerHTML = Date();
+   }
+ </script>
+ <br><br><br>
+ 
+</body>
+
+</html>
