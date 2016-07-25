@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+  
+<head></head>
+
+<body>
+  
+  <!-- JavaScript Strings -->
+ <div style = "color:blue">JavaScript Strings</div>
+ <div style = "color:red">String Length</div>
+ <div id = "test1"></div>
+ 
+ <script>
+   var x1 = "school day";
+   var y1 = x1.length;
+   document.getElementById("test1").innerHTML = y1;
+ </script>
+ <br><br><br>
+
+
+
+
+
+
+  <div style = "color:red">Special Characters</div>
+  <div style = "color:gray">
+    <strong>The backslash escape character</strong> turns special characters into string characters:
+  </div>
+  <div id = "test2"></div>
+  
+  <script>
+    var x2 = 'It\'s alright';
+    var y2 = "We are the so-called\"Vikings\"from the north";
+    document.getElementById("test2").innerHTML = x2 + "<br>" +y2;
+  </script>
+  <br><br><br>
+
+
+
+
+  
+  <div style = "color:red">Breaking Long Code Lines</div>
+  <div style = "color:gray">You can also break up a code line 
+  within a text string with a single backslash:</div>
+  <div id = "test3"></div>
+  
+  <script>
+    document.getElementById("test3").innerHTML = "Hello \
+    Dolly";
+  </script>
+  <br>
+  
+  <div style = "color:gray">The safest (but a little slower) 
+  way to break a long string is to use string addition:</div>
+  <div id = "test4"></div>
+
+  <script>
+    document.getElementById("test4").innerHTML = "Hello"
+    + " Dolly";
+  </script>
+  <br><br><br>
+ 
+ 
+ 
+ 
+ 
+  <div style = "color:red">Strings Can be Objects</div>
+  <div style = "color:gray">
+    Don't create strings as objects. It slows down execution speed.
+    The new keyword complicates the code. This can produce some unexpected results:
+  </div>
+  <div id = "test5"></div>
+  
+  <script>
+    var x5 = "John";   // x is a string
+    var y5 = new String("John");   // y is an object
+    document.getElementById("test5").innerHTML = typeof x5 + "<br>" + typeof y5;
+  </script>
+  <br><br><br>
+ 
+  <div style = "color:gray">
+    When using the == equality operator, equal strings looks equal:
+  </div>
+  <div id = "test6"></div>
+ 
+  <script>
+    var x6 = "John";
+    var y6 = new String("John");
+    document.getElementById("test6").innerHTML = (x6==y6);
+  </script>
+  <br><br><br>
+ 
+ 
+  <div style = "color:gray">
+    When using the === equality operator, equal strings are not equal,
+    because the === operator expects equality in both type and value.
+  </div>
+  <div id = "test7"></div>
+ 
+  <script>
+    var x7 = "John";
+    var y7 = new String("John");
+    document.getElementById("test7").innerHTML = (x7===y7);
+  </script>
+  <br><br><br>
+  
+  
+  <div style = "color:gray">
+    Or even worse. Objects cannot be compared:
+  </div>
+  <div id = "test8"></div>
+  
+  <script>
+    var x8 = new String("John");
+    var y8 = new String("John");
+    document.getElementById("test8").innerHTML = (x8==y8);
+    // (x == y) is false because x and y are different objects
+    // (x == x) is true because both are the same object
+    //JavaScript objects cannot be compared.
+  </script>
+  <br><br><br>
+ 
+ 
+ 
+ 
+ <div style = "color:blue">JavaScript String Methods</div>
+ <div style = "color:red">Finding a String in a String</div>
+ <div style = "color:gray">
+   The indexOf() method returns the index of (the position of) 
+   the first occurrence of a specified text in a string:
+ </div>
+ <div style = "color:gray">
+   Both the indexOf(), and the lastIndexOf() methods return -1 
+   if the text is not found.
+ </div>
+ <div id = "test9"></div>
+ 
+ <script>
+   var x9 = "Please locate where 'locate' occurs!";
+   var y9 = x9.indexOf("locate");
+   document.getElementById("test9").innerHTML = y9;
+ </script>
+ <br><br><br>
+ 
+ 
+ 
+ <div style = "color:red">Searching for a String in a String</div>
+ <div style = "color:gray">
+   The search() method searches a string for 
+   a specified value and returns the position of the match:
+ </div>
+ <div id = "test10"></div>
+ 
+ <script>
+   var x10 = "Please locate where 'locate' occurs!";
+   var y10 = x10.search("locate");
+   document.getElementById("test10").innerHTML = y10;
+ </script>
+ <br><br><br>
+ 
+ 
+ 
+ 
+ <div style = "color:red">The slice() Method</div>
+ <div id = "test11"></div>
+ 
+ <script>
+   var x11 = "Apple, Banana, Kiwi";
+   var y11 = x11.slice(7,13);
+   document.getElementById("test11").innerHTML = y11;
+ </script>
+ <br><br><br>
+ 
+ 
+ 
+ 
+ <div style = "color:red">The substring() Method</div>
+ <div style = "color:gray">
+   The difference is that substring() cannot accept negative indexes.
+ </div>
+ <div id = "test12"></div>
+ 
+ <script>
+   var x12 = "Apple, Banana, Kiwi";
+   var y12 = x12.substring(7,13);
+   document.getElementById("test12").innerHTML = y12;
+ </script>
+ <br><br><br>
+ 
+ 
+ 
+ <div style = "color:red">The substr() Method</div>
+ <div style = "color:gray">
+   The difference is that the second parameter 
+   specifies the length of the extracted part.
+ </div>
+ <div id = "test13"></div>
+ 
+ <script>
+   var x13 = "Apple, Banana, Kiwi";
+   var y13 = x13.substr(7,6);
+   document.getElementById("test13").innerHTML = y13;
+ </script>
+ <br><br><br>
+ 
+ 
+ 
+ <div style = "color:red">Replacing String Content</div>
+ <div id  = "test14"></div>
+ 
+ <script>
+   var x14 = "Please visit Microsoft!";
+   var y14 = x14.replace("Microsoft", "coupang");
+   document.getElementById("test14").innerHTML = y14;
+ </script>
+ <br><br><br>
+ 
+ 
+ <div style = "color:gray">
+   By default, the replace() function replaces only the first match.
+   To replace all matches, use a regular expression with a g flag (for global match):
+ </div>
+ <div id = "test15"></div>
+ 
+ <script>
+   var x15 = "Please visit Microsoft!";
+   var y15 = x15.replace(/Microsoft/g,"W3Schools");
+  document.getElementById("test15").innerHTML = y15;
+ </script>
+ <br><br><br>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <br><br><br>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+</body>
+
+</html>
