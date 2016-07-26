@@ -232,17 +232,29 @@
  
  
  
+ <div style = "color:red">Converting to Upper and Lower Case</div>
+ <div id = "test16"></div>
+ 
+ <script>
+   var x16 = "Hello World!";
+   var y16 = x16.toUpperCase();
+   document.getElementById("test16").innerHTML = y16;
+ </script>
+ <br><br><br>
  
  
  
+ <div style = "color:red">The concat() Method</div>
+ <div style = "color:gray">concat() joins two or more strings:</div>
+ <div style = "color:gray">Strings cannot be changed, only replaced.</div>
+ <div id = "test17"></div>
  
- 
- 
- 
- 
- 
- 
- 
+ <script>
+   var x17 = "Hello";
+   var y17 = "World";
+   var z17 = x17.concat(" ", y17);
+   document.getElementById("test17").innerHTML = z17;
+ </script>
  <br><br><br>
  
  
@@ -250,12 +262,50 @@
  
  
  
+ <div style = "color:red">The charAt() Method</div>
+ <div id = "test18"></div>
+ 
+ <script>
+   var x18 = "HELLO WORLD";
+   document.getElementById("test18").innerHTML = x18.charAt(0);
+ </script>
+ <br><br><br>
+ 
+ 
+ 
+ <div style = "color:red">The charCodeAt() Method</div>
+ <div style = "color:gray">
+   The charCodeAt() method returns the unicode of the character at a specified index in a string:
+ </div>
+ <div id = "test19"></div>
+ 
+ <script>
+   var x19 = "HELLO WORLD";
+   document.getElementById("test19").innerHTML = x19.charCodeAt(0);
+ </script>
+ <br><br><br>
  
  
  
  
+ <div style = "color:red">Converting a String to an Array</div>
+ <div style = "color:gray">
+   A string can be converted to an array with the split() method:
+ </div>
+ <div id = "test20"></div>
  
- 
+ <script>
+   var x20 = "a, b, c, d";
+   // document.getElementById("test20").innerHTML = typeof x20;
+   
+   var y20 = x20.split(","); //Split on commas
+   var z20 = x20.split(" "); //Split on spaces
+   var m20 = x20.split("|");  // Split on pipe
+   document.getElementById("test20").innerHTML = typeof y20 + " " + y20[0]
+   + "<br>" + typeof z20 + " " + z20[0] + "<br>" + typeof m20 + " " + m20[0];
+ </script>
+ <br><br><br>
+
 </body>
 
 </html>
