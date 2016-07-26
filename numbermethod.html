@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+
+  <head></head>
+
+  <body>
+        <!-- JavaScript Number -->
+    <div style = "color:blue">JavaScript Numbers</div>
+    <div style = "color:red">Precision</div>
+    <div style = "color:gray">
+      Integers (numbers without a period or exponent notation) are 
+      considered accurate up to 15 digits.
+    </div>
+    <div id = "test1"></div>
+    
+    <script>
+      var x1 = 999999999999999;
+      var y1 = 9999999999999999;
+      document.getElementById("test1").innerHTML = x1 + "<br>" + y1;
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    
+    
+    <div style = "color:gray">
+      The maximum number of decimals is 17, 
+      but floating point arithmetic is not always 100% accurate:
+    </div>
+    <div id = "test2"></div>
+    
+    <script>
+      var x2 = 0.2 + 0.1;
+      document.getElementById("test2").innerHTML = x2;
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    
+    
+    <div style = "color:gray">
+      To solve the problem above, it helps to multiply and divide:
+    </div>
+    <div id = "test3"></div>
+    
+    <script>
+      var x3 = (0.2*10 + 0.1*10)/10
+      document.getElementById("test3").innerHTML = x3;
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    
+    
+    <div style = "color:red">Hexadecimal</div>
+    <div style = "color:gray">
+      JavaScript interprets numeric constants 
+      as hexadecimal if they are preceded by 0x.
+    </div>
+    <div id = "test4"></div>
+    
+    <script>
+      var x4 = 0xFF;
+      document.getElementById("test4").innerHTML = x4;
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    
+
+    <div style = "color:gray">
+      By default, Javascript displays numbers as base 10 decimals.
+      But you can use the toString() method to output numbers 
+      as base 16 (hex), base 8 (octal), or base 2 (binary).
+    </div>
+    <div id = "test5"></div>
+    
+    <script>
+      var x5 = 128;
+      document.getElementById("test5").innerHTML = x5.toString(16) + 
+      " " + x5.toString(8) + " " + x5.toString(2);
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    
+    
+    <div style = "color:red">Infinity</div>
+    <div style = "color:gray">
+      Infinity (or -Infinity) is the value JavaScript will return 
+      if you calculate a number outside the largest possible number.
+    </div>
+    <div id = "test6"></div>
+    
+    <script>
+      var x6 = 2;
+      var y6 = "";
+      while( x6 != Infinity ){
+        x6 = x6 * x6;
+        y6 = y6 + x6 + "<br>";
+       
+      }
+      document.getElementById("test6").innerHTML = y6;
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    
+    <div style = "color:gray">
+      Division by 0 (zero) also generates Infinity:
+    </div>
+    <div id = "test7"></div>
+    
+    <script>
+      var x7 = 2/0;
+      var y7 = -2/0
+      document.getElementById("test7").innerHTML = x7 + " " + y7;
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    
+
+    <div style = "color:gray">
+      Infinity is a number: typeOf Infinity returns number.
+    </div>
+    <div id = "test8"></div>
+    
+    <script>
+      var x8 = Infinity;
+      document.getElementById("test8").innerHTML = typeof Infinity;
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    
+    
+    <div style = "color:red">NaN - Not a Number</div>
+    <div id = "test9"></div>
+    
+    <script>
+      document.getElementById("test9").innerHTML = 100 / "Apple";
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    
+    
+    <div style = "color:gray">
+      However, if the string contains a numeric value , 
+      the result will be a number:
+    </div>
+    <div id = "test10"></div>
+    
+    <script>
+      document.getElementById("test10").innerHTML = 100 / "10";
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    
+
+    <div style = "color:gray">
+      You can use the global JavaScript function isNaN() to 
+      find out if a value is a number.
+    </div>
+    <div id = "test11"></div>
+    
+    <script>
+      var x11 = 100 / "Apple";
+      document.getElementById("test11").innerHTML = isNaN(x11);
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    
+
+    <div style = "color:gray">
+      Watch out for NaN. If you use NaN in a mathematical operation, 
+      the result will also be NaN:
+    </div>
+    <div id = "test12"></div>
+    
+    <script>
+      var x12 = NaN;
+      var y12 = 5;
+      var z12 = x12 + y12;
+      document.getElementById("test12").innerHTML = z12;
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    
+
+    <div style = "color:gray">
+      Or the result might be a concatenation:
+    </div>
+    <div id = "test13"></div>
+    
+    <script>
+      var x13 = NaN;
+      var y13 = "5";
+      var z13 = x13 + y13;
+      document.getElementById("test13").innerHTML = z13;
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    
+
+    <div style = "color:gray">
+      NaN is a number, and typeof NaN returns number:
+    </div>
+    <div id = "test14"></div>
+    
+    <script>
+      var x14 = NaN;
+      document.getElementById("test14").innerHTML = typeof x14;
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    
+    
+    <div style = "color:red">Numbers Can be Objects</div>
+    <div id = "test15"></div>
+    
+    <script>
+      var x15 = 123;
+      var y15 = new Number(123);
+      document.getElementById("test15").innerHTML = typeof x15 + " "
+      + typeof y15;
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    
+    
+    <div style = "color:gray">
+      When using the == equality operator, equal numbers looks equal:
+    </div>
+    <div id = "test16"></div>
+    
+    <script>
+      var x16 = 123;
+      var y16 = new Number(123);
+      document.getElementById("test16").innerHTML = "(x16 == y16) " + (x16 == y16) 
+      + "<br>" + "(x16 === y16) " + (x16 === y16);
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    
+
+    <div style = "color:gray">
+      Or even worse. Objects cannot be compared:
+    </div>
+    <div id = "test17"></div>
+    
+    <script>
+      var x17 = new Number(123);
+      var y17 = new Number(123);
+      document.getElementById("test17").innerHTML = (x17 == y17);
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    
+    
+    <!-- JavaScript Number Methods -->
+    <div style = "color:blue">JavaScript Number Methods</div>
+    <div style = "color:red">The toString() Method</div>
+    <div style = "color:gray">
+      toString() returns a number as a string.
+    </div>
+    <div id = "prac1"></div>
+    
+    <script>
+      var a1 = 123;
+      document.getElementById("prac1").innerHTML = a1.toString() + "<br>" 
+      + (123).toString() + "<br>" + (100 + 23).toString();
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    
+    
+    <div style = "color:red">The toExponential() Method</div>
+    <div style = "color:gray">
+      toExponential() returns a string, with a number 
+      rounded and written using exponential notation.
+    </div>
+    <div id = "prac2"></div>
+    
+    <script>
+      var a2 = 9.656;
+      document.getElementById("prac2").innerHTML = a2.toExponential()
+      + "<br>" + a2.toExponential(2) + "<br>" + a2.toExponential(4) 
+      + "<br>" + a2.toExponential(6);
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    
+    
+    <div style = "color:red">The toFixed() Method</div>
+    <div style = "color:gray">
+      toFixed() returns a string, with the number written 
+      with a specified number of decimals:
+    </div>
+    <div id = "prac3"></div>
+    
+    <script>
+      var a3 = 9.656;
+      document.getElementById("prac3").innerHTML = a3.toFixed(0)
+      + "<br>" + a3.toFixed(2) + "<br>" + a3.toFixed(4) + "<br>" 
+      + a3.toFixed(6);
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    
+    
+    <div style = "color:red">The toPrecision() Method</div>
+    <div style = "color:gray">
+      toPrecision() returns a string, 
+      with a number written with a specified length:
+    </div>
+    <div id = "prac4"></div>
+    
+    <script>
+      var a4 = 9.656;
+      document.getElementById("prac4").innerHTML = a4.toPrecision()
+      + "<br>" + a4.toPrecision(2) + "<br>" + a4.toPrecision(4) 
+      + "<br>" + a4.toPrecision(6);
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    
+    
+    <div style = "color:red">The valueOf() Method</div>
+    <div style = "color:gray">
+      valueOf() returns a number as a number.
+      In JavaScript, a number can be a primitive value (typeof = number) 
+      or an object (typeof = object).
+      The valueOf() method is used internally in JavaScript 
+      to convert Number objects to primitive values.
+    </div>
+    <div id = "prac5"></div>
+    
+    <script>
+      var a5 = 123;
+      document.getElementById("prac5").innerHTML = a5.valueOf() +
+      "<br>" + (123).valueOf() + "<br>" + (100 +23).valueOf();
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    
+    
+    <div style = "color:red">The Number() Method</div>
+    <div style = "color:gray">
+      Number() can be used to convert JavaScript variables to numbers:
+    </div>
+    <div id = "prac6"></div>
+    
+    <script>
+      var a6 = true;
+      document.getElementById("prac6").innerHTML = Number(a6);
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    
+    
+    <div style = "color:red">The parseInt() Method</div>
+    <div style = "color:gray">
+      parseInt() parses a string and returns a whole number. 
+      Spaces are allowed. Only the first number is returned:
+      If the number cannot be converted, NaN (Not a Number) is returned.
+    </div>
+    <div id = "prac7"></div>
+    
+    <script>
+      document.getElementById("prac7").innerHTML = parseInt(10.33)
+      + "<br>" + parseInt("years 10");
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    
+    
+    <div style = "color:red">The parseFloat() Method</div>
+    <div style = "color:gray">
+      parseFloat() parses a string and returns a number. 
+      Spaces are allowed. Only the first number is returned:
+      If the number cannot be converted, NaN (Not a Number) is returned.
+    </div>
+    <div id = "prac8"></div>
+    
+    <script>
+      document.getElementById("prac8").innerHTML = parseFloat(10.33);
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    
+    
+    <div style = "color:red">Number Properties</div>
+    <div id = "prac9"></div>
+    
+    <script>
+      document.getElementById("prac9").innerHTML = Number.MAX_VALUE;
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    
+    
+
+    <div style = "color:gray">
+      Number properties belongs to the 
+      JavaScript's number object wrapper called Number.
+      These properties can only be accessed as Number.MAX_VALUE.
+      Using myNumber.MAX_VALUE, where myNumber is a variable, 
+      expression, or value, will return undefined:
+    </div>
+    <div id = "prac10"></div>
+    
+    <script>
+      var a10 = 6;
+      var b10 = a10.MAX_VALUE;
+      document.getElementById("prac10").innerHTML = b10;
+    </script>
+    <br><br><br>
+    
+
+  </body>
+
+</html>
