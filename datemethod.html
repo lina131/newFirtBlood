@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+
+  <head></head>
+
+  <body>
+        <!-- JavaScript Math Object -->
+    <div style = "color:blue">JavaScript Math Object</div>
+    <div style = "color:red">The Math Object</div>
+    <div style = "color:gray">
+      Math has no constructor. 
+      No methods have to create a Math object first.
+    </div>
+    <div id = "test1"></div>
+    
+    <script>
+     document.getElementById("test1").innerHTML = Math.random();
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    <div style = "color:red">Math.min() and Math.max()</div>
+    <div style = "color:gray"></div>
+    <div id = "test2"></div>
+    
+    <script>
+     document.getElementById("test2").innerHTML = Math.min(0, 150, 30, 20, -8, -200)
+     + " " + Math.max(0, 150, 30, 20, -8, -200);
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    <div style = "color:red">Math.random()</div>
+    <div style = "color:gray">
+      Math.random() returns a random number 
+      between 0 (inclusive),  and 1 (exclusive):
+    </div>
+    <div id = "test3"></div>
+    
+    <script>
+     document.getElementById("test3").innerHTML = Math.random();
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    <div style = "color:red">Math.round()</div>
+    <div style = "color:gray">
+      Math.round() rounds a number to the nearest integer:
+    </div>
+    <div id = "test4"></div>
+    
+    <script>
+     document.getElementById("test4").innerHTML = Math.round(4.4)
+     + " " + Math.round(4.7);
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    <div style = "color:red">Math.ceil()</div>
+    <div style = "color:gray">
+      Math.ceil() rounds a number <strong>up</strong> to the nearest integer:
+    </div>
+    <div id = "test5"></div>
+    
+    <script>
+     document.getElementById("test5").innerHTML = Math.ceil(4.4);
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    <div style = "color:red">Math.floor()</div>
+    <div style = "color:gray">
+      Math.floor() rounds a number <strong>down</strong> to the nearest integer:
+    </div>
+    <div id = "test6"></div>
+    
+    <script>
+     document.getElementById("test6").innerHTML = Math.floor(4.4) 
+     + " " + Math.floor(Math.random() * 11);;
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    <div style = "color:red">Math Constants</div>
+    <div style = "color:gray"></div>
+    <div id = "test7"></div>
+    
+    <script>
+     document.getElementById("test7").innerHTML = 
+     Math.E + "<br>" +
+     Math.PI + "<br>" +
+     Math.SQRT2 + "<br>" +
+     Math.SQRT1_2 + "<br>" +
+     Math.LN2 + "<br>" +
+     Math.LN10 + "<br>" +
+     Math.LOG2E + "<br>" +
+     Math.LOG10E;
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    <!--JavaScript Dates  -->
+    <div style = "color:blue">JavaScript Dates</div>
+    <div style = "color:red">Displaying Dates</div>
+    <div id = "date1"></div>
+    
+    <script>
+     document.getElementById("date1").innerHTML = Date();
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    <div style = "color:red">Creating Date Objects</div>
+    <div style = "color:gray">
+      Using new Date(), creates a new date object with 
+      the current date and time:
+    </div>
+    <div id = "date2"></div>
+    
+    <script>
+     var d2 = new Date();
+     document.getElementById("date2").innerHTML = d2;
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    <div style = "color:gray">
+      Using new Date(date string), creates a new date object 
+      from the specified date and time:
+    </div>
+    <div id = "date3"></div>
+    
+    <script>
+     var d3 = new Date("October 13, 2014 11:03:00");
+     document.getElementById("date3").innerHTML = d3;
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    <div style = "color:gray">
+      Using new Date(number), creates a new date object as zero time 
+      plus the number.
+      Zero time is 01 January 1970 00:00:00 UTC. 
+      The number is specified in milliseconds:
+    </div>
+    <div id = "date4"></div>
+    
+    <script>
+     var d4 = new Date(86400000)
+     document.getElementById("date4").innerHTML = d4;
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+  
+    <div style = "color:gray">
+      Using new Date(7 numbers), creates a new date object 
+      with the specified date and time:
+      The 7 numbers specify the year, month, day, hour, minute, 
+      second, and millisecond, in that order:
+    </div>
+    <div id = "date5"></div>
+    
+    <script>
+     var d5 = new Date(99,5,24,11,33,30,0);
+     document.getElementById("date5").innerHTML = d5;
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+
+    <div style = "color:gray">
+      Variants of the example above let us 
+      omit any of the last 4 parameters:
+    </div>
+    <div id = "date6"></div>
+    
+    <script>
+     var d6 = new Date(99,5,24);
+     document.getElementById("date6").innerHTML = d6;
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    <div style = "color:red">Displaying Dates</div>
+    <div style = "color:gray">
+      When you display a date object in HTML, 
+      it is automatically converted to a string, 
+      with the toString() method.
+    </div>
+    <div style = "color:gray">
+      The toUTCString() method converts a date 
+      to a UTC string (a date display standard).
+    </div>
+    <div style = "color:gray">
+      The toDateString() method converts 
+      a date to a more readable format:
+    </div>
+    <div id = "date7"></div>
+    
+    <script>
+     var d7 = new Date()
+     document.getElementById("date7").innerHTML = d7;
+     + "<br>" + d7.toString() + "<br>" + d7.toUTCString()
+     + "<br>" + d7.toDateString();
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    <!-- JavaScript Date Formats --> 
+    <div style = "color:blue">JavaScript Date Formats</div>
+    <div style = "color:red">JavaScript ISO Dates</div>
+    <div style = "color:gray"></div>
+    <div id = "date8"></div>
+    
+    <script>
+     var d8 = new Date("2015-03-18");
+     document.getElementById("date8").innerHTML = d8;
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    <div id = "date9"></div>
+    
+    <script>
+     var d9 = new Date("2015-03");
+     document.getElementById("date9").innerHTML = d9;
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    <div id = "date10"></div>
+    
+    <script>
+     var d10 = new Date("2015");
+     document.getElementById("date10").innerHTML = d10;
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    <div id = "date11"></div>
+    
+    <script>
+     var d11 = new Date("2015-03-25T12:00:00")
+     document.getElementById("date11").innerHTML = d11;
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    <div style = "color:red">JavaScript Short Dates.</div>
+    <div style = "color:gray">
+      Short dates are most often written with 
+      an "MM/DD/YYYY" syntax like this:
+    </div>
+    <div id = "date12"></div>
+    
+    <script>
+     var d12 = new Date("03/25/2015")
+     document.getElementById("date12").innerHTML = d12;
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+  
+    <div id = "date13"></div>
+    
+    <script>
+     var d13 = new Date("2015/03/25")
+     document.getElementById("date13").innerHTML = d13;
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    <div style = "color:red">Leading Zero WARNING !</div>
+    <div style = "color:gray">
+      Leading zeroes can produce unexpected results
+    </div>
+    <div id = "date14"></div>
+    
+    <script>
+     var d14 = new Date("2015-3-25");
+     var e14 = new Date("2015-03-25");
+     document.getElementById("date14").innerHTML = d14
+     + "<br>" + e14;
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    <div style = "color:red">JavaScript Long Dates.</div>
+    <div id = "date15"></div>
+    
+    <script>
+     var d15 = new Date("Mar 25 2015");
+     document.getElementById("date15").innerHTML = d15;
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+
+    <div id = "date16"></div>
+    
+    <script>
+     var d16 = new Date("25 Mar 2015");
+     document.getElementById("date16").innerHTML = d16;
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    <!-- JavaScript Date Methods -->
+    <div style = "color:blue">JavaScript Date Methods</div>
+    <div style = "color:red">The getTime() Method</div>
+    <div style = "color:gray">
+      getTime() returns the number of milliseconds 
+      since January 1, 1970:
+    </div>
+    <div id = "date17"></div>
+    
+    <script>
+     var d17 = new Date();
+     document.getElementById("date17").innerHTML = d17.getTime();
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+
+
+    <div style = "color:red">The getDay() Method</div>
+    <div style = "color:gray">
+      getDay() returns the weekday as a number (0-6):
+    </div>
+    <div id = "date18"></div>
+    
+    <script>
+     var d18 = new Date();
+     document.getElementById("date18").innerHTML = d18.getDay();
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    <div style = "color:red">The setFullYear() Method</div>
+    <div style = "color:gray">
+      setFullYear() sets a date object to a specific date. 
+      In this example, to January 14, 2020:
+    </div>
+    <div id = "date19"></div>
+    
+    <script>
+     var d19 = new Date();
+     d19.setFullYear(2020, 0, 14);
+     document.getElementById("date19").innerHTML = d19;
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    <div style = "color:red">The setDate() Method</div>
+    <div style = "color:gray">
+      setDate() sets the day of the month (1-31):
+    </div>
+    <div id = "date20"></div>
+    
+    <script>
+     var d20 = new Date();
+     d20.setDate(15);
+     document.getElementById("date20").innerHTML = d20;
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    <div style = "color:gray">
+      The setDate() method can also be used to add days to a date:
+    </div>
+    <div id = "date21"></div>
+    
+    <script>
+     var d21 = new Date();
+     d21.setDate(d21.getDate() + 50);
+     document.getElementById("date21").innerHTML = d21;
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+    
+    <div style = "color:red">Date Input - Parsing Dates</div>
+    <div style = "color:gray">
+      If you have a valid date string, you can use 
+      the Date.parse() method to convert it to milliseconds.
+      Date.parse() returns the number of milliseconds 
+      between the date and January 1, 1970:
+    </div>
+    <div id = "date22"></div>
+    
+    <script>
+     var d22 = Date.parse("March 21, 2012");
+     document.getElementById("date22").innerHTML = d22;
+    </script>
+    <br><br><br>
+    
+    
+    
+    
+
+    <div style = "color:red">Compare Dates</div>
+    <div style = "color:gray">
+      JavaScript counts months from 0 to 11. January is 0. December is 11.
+    </div>
+    <div id = "date23"></div>
+    
+    <script>
+     var today = new Date();
+     var someday = new Date();
+     var text = "";
+     someday.setFullYear(2100, 0, 14);
+     if (today > someday){
+       text = "Today is after January 14, 2100."
+     } else {
+       text = "Today is before January 14, 2100."
+     }
+     document.getElementById("date23").innerHTML = text;
+    </script>
+    <br><br><br>
+    
+  </body>
+
+</html>
