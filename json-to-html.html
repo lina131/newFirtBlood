@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script data-require="handlebars.js@1.3.0" data-semver="1.3.0" src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <div id="test1"></div>
+    <div id="test2"></div>
+    <div id="test3"></div>
+    <div id="test4"></div>
+    <div id="list"></div>
+    
+    <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.js"></script>
+    <script>
+      var people = { 
+        "programmers": [ 
+          { "firstName": "Brett", "lastName":"McLaughlin", "email": "aaaa" },
+    　  　  { "firstName": "Jason", "lastName":"Hunter", "email": "bbbb" },
+    　   　{ "firstName": "Elliotte", "lastName":"Harold", "email": "cccc" }
+    　　]
+      } ;
+      var newJSONtext = JSON.stringify(people);
+      document.getElementById("test1").innerHTML = typeof people;
+      
+      var htmltemp = " \
+      {{#each programmers}} \
+        <ul style = 'color:red'> \
+          <li>{{firstName}}</li> \
+          <li>{{lastName}}</li> \
+          <li>{{email}}</li> \
+        </ul> \
+      {{/each}}\
+      ";
+      document.getElementById("test2").innerHTML = typeof htmltemp;
+      
+           var template = Handlebars.compile(htmltemp),
+           html = template(people);
+           document.getElementById("test3").innerHTML = typeof template;
+           document.getElementById("test4").innerHTML = typeof html;
+           
+      $("#list").append( html );
+    </script>
+  </body>
+
+</html>
